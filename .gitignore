@@ -1,0 +1,34 @@
+# Archivos de log
+*.log
+
+# Caché
+*.cache
+
+# Configuraciones locales
+.env
+.env.local
+.env.*.local
+
+# Archivos o carpetas excluidos
+Laravel.code-workspace
+
+# Dependencias de Composer
+/vendor/
+
+# Archivos de configuración de IDEs
+.vscode/
+.idea/
+
+# Archivos temporales
+*.tmp
+*.swp
+
+# Archivos de respaldo
+*.bak
+
+# Archivos de PHPUnit
+phpunit.xml
+phpunit.xml.dist
+
+# Archivos de cobertura de pruebas
+coverage/
