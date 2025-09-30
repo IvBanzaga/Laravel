@@ -1,5 +1,9 @@
+/* TODO: Interfaz que describe la forma de un Post en la aplicación */
 export interface Post {
-  id: number;
+  /* TODO: Identificador opcional del post */
+  id?: number;
+  /* TODO: Título del post */
   title: string;
-  content : string;
+  /* TODO: Contenido del post */
+  content: string;
 }

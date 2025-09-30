@@ -10,15 +10,18 @@ import { PostService } from '../post-service';
   styleUrl: './create.css'
 })
 export class Create {
-
+  /* TODO: Campos del formulario de creación */
   title = '';
   content = '';
   error = '';
 
+  /* TODO: Inyectar servicio y router para crear y redirigir */
   constructor(private postService: PostService, private router: Router) {}
 
+  /* TODO: Enviar formulario: validar, crear post y redirigir */
   submit(){
     if(!this.title || !this.content){
+      /* TODO: Mostrar error si faltan campos obligatorios */
       this.error = ('Titulo y Contenido son obligatorios');
       return;
     }
@@ -28,9 +31,10 @@ export class Create {
       id: 1
     }
 
-
+    /* TODO: Llamar al servicio para crear el post */
     this.postService.createPost(input).subscribe({});
 
+    /* TODO: Notificar al usuario y navegar al índice */
     alert("Post creado correctamente");
 
     this.router.navigate(['/']);
