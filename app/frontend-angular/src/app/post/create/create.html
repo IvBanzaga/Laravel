@@ -1,0 +1,25 @@
+<div class="card mt-5">
+  <h3 class="card-header p-3">Crear Publicación</h3>
+  <div class="card-body">
+    <div class="mb-3">
+      <a [routerLink]="['/']" class="btn btn-primary">Volver</a>
+    </div>
+    <form (ngSubmit)="submit()">
+      <div class="mb-3">
+        <label for="title" class="form-label">Título</label>
+        <input type="text" id="title" class="form-control" [(ngModel)]="title" name="title" required />
+      </div>
+      <div class="mb-3">
+        <label for="content" class="form-label">Contenido</label>
+        <textarea id="content" class="form-control" [(ngModel)]="content" name="content" required></textarea>
+
+        <div>
+          @if(error){
+          <div class="alert alert-danger mt-2">{{error}}</div>
+          }
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success">Crear</button>
+    </form>
+  </div>
+</div>

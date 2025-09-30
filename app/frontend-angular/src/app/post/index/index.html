@@ -1,0 +1,32 @@
+<div class="card mt-5">
+  <h3 class="card-header p-3">Angular CRUD</h3>
+  <div class="card-body">
+    <div class="mb-3">
+      <a [routerLink]="'/create'" class="btn btn-success">Crear Post</a>
+    </div>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Titulo</th>
+          <th>Cuerpo</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(post of posts; track post.id){
+        <tr>
+          <td>{{post.id}}</td>
+          <td>{{post.title}}</td>
+          <td>{{post.content}}</td>
+          <td>
+            <a [routerLink]="[post.id, 'edit']" class="btn btn-primary btn-sm me-2">Editar</a>
+            <a class="btn btn-danger btn-sm">Eliminar</a>
+          </td>
+        </tr>
+      }
+      </tbody>
+    </table>
+  </div>
+</div>
+
